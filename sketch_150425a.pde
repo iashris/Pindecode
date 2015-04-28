@@ -69,18 +69,17 @@ void draw() {
 
 void keyPressed() {
   // If the return key is pressed, save the String and clear it
-  if (key == '\n' ) {
+  if (String.fromCharCode(key) == '\n' ) {
     saved = typing;
     // A String can be cleared by setting it equal to ""
     typing = ""; 
   } else {
     // Otherwise, concatenate the String
     // Each character typed by the user is added to the end of the String variable.
-    if (keyCode == BACKSPACE) {
-typing = typing.substring(0, typing.length() - 1);
-} 
-else
-if (key != CODED) typing += key;
+//    if (String.fromCharCode(keyCode) == BACKSPACE) {
+//typing = typing.substring(0, typing.length() - 1);
+//} 
+//else
+if (String.fromCharCode(key) != CODED) typing += String.fromCharCode(key);
   }
 }
-
